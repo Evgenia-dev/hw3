@@ -31,3 +31,25 @@ class WeightLossCalculator {
         System.out.printf("Среднее количество дней для достижения результата: %.2f дней\n", averageDays);
     }
 }
+class SalaryIncreaseCalculator {
+    public static void main(String[] args) {
+        String[] names = {"Маша", "Денис", "Кристина"};
+        double[] currentSalaries = {67760, 83690, 76230};
+
+        double increasePercentage = 0.10;
+
+        for (int i = 0; i < names.length; i++) {
+            String name = names[i];
+            double currentSalary = currentSalaries[i];
+
+            double newSalary = currentSalary * (1 + increasePercentage);
+
+            double currentAnnualIncome = currentSalary * 12;
+            double newAnnualIncome = newSalary * 12;
+
+            double incomeDifference = newAnnualIncome - currentAnnualIncome;
+
+            System.out.printf("%s теперь получает %.2f рублей. Годовой доход вырос на %.2f рублей.%n", name, newSalary, incomeDifference);
+        }
+    }
+}
